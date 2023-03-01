@@ -1,0 +1,21 @@
+#
+# ~/.bash_profile
+#
+
+[[ -f ~/.bashrc ]] && . ~/.bashrc
+
+
+if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
+    exec startx
+fi
+
+#[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
+
+
+
+export PATH="${PATH}:/home/mcbtaguiad/.bin"
+export PATH="${PATH}:/home/mcbtaguiad/.cargo/bin"
+
+
+
+
